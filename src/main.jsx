@@ -7,6 +7,7 @@ import Teacher from './faculty-compo/Teachers.jsx';
 import Error from './layouts/Error.jsx';
 import Routine from './routine-compo/Routine.jsx';
 import Subjects from './subjects-compo/Subjects.jsx';
+import Today from './todays-classes/Today.jsx';
 
 import {
   createBrowserRouter,
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/subjects",
         element: <Subjects></Subjects>
+      },
+      {
+        path: "/today",
+        element: <Today></Today>
       }
     ]
   },
