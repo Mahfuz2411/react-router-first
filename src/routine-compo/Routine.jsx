@@ -10,9 +10,9 @@ const Routine = () => {
             .then(res => res.json())
             .then(data => setRoutine(data))
     }, []);
-    // routines.map(routine => console.log(routine));
+    
     return (
-        <div>
+        <div className="container m-auto grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {
                 routines.map((routine) => <Cards key={routine.no} routine={routine}></Cards>)
             }
