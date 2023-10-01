@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import Cards from '../layouts/Cards';
+import Cards from './Cards';
 
 const Routine = () => {
     const [routines, setRoutine] = useState([]);
