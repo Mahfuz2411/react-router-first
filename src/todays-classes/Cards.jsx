@@ -66,17 +66,13 @@ const Cards = ({ routine, weekday, notify }) => {
     const cName = timeDiff(startTime, endTime, curTime) === "Finished" ? "bg-red-100" : timeDiff(startTime, endTime, curTime) == "Running" ? "bg-yellow-100" : "bg-green-100";
 
 
-
-
-
     return (
-        <div onClick={() => notify(timeDiff(startTime, endTime, curTime))}>
-            <div className={`card max-w-90 bg-base-100 shadow-xl border-2 ${cName}`}>
-                <div className="card-body m-auto ">
-                    <h2 className="card-title m-auto">{routine.subjectFull}</h2>
-                    <p className="text-center">Time: {classObj.start_time}-{classObj.end_time}</p>
-                    <p className="text-center">{timeDiff(startTime, endTime, curTime)}</p>
-                </div>
+        <div className={`card max-w-sm bg-base-100 shadow-xl border-2h-full h-full w-full m-auto  ${cName}`} onClick={() => notify(timeDiff(startTime, endTime, curTime))}>
+            <div className="card-body flex flex-col justify-between">
+                <h2 className="card-title m-auto text-center">{routine.subjectFull}</h2>
+                <p className="text-center">Time: {classObj.start_time}-{classObj.end_time}</p>
+                <p className="text-center">Room No: {classObj.room}</p>
+                <p className="text-center">{timeDiff(startTime, endTime, curTime)}</p>
             </div>
         </div>
     );

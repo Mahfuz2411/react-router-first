@@ -19,10 +19,11 @@ const Today = () => {
 
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; 
 
-    
+    console.log(days[weekday]);
+
     const notify = (mssg) => toast(mssg);
     return (
-        <div>
+        <div className="container m-auto flex flex-wrap gap-4">
             {
                 routines.map(routine => days[weekday] in routine? <Card key={routine.no} routine={routine} weekday={days[weekday]} notify={notify}></Card>:undefined)
             }
