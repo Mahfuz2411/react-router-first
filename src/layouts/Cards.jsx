@@ -5,9 +5,10 @@ const Cards = ({ routine }) => {
 	return (
 		<>
 			<div className="card h-full w-full bg-base-100 shadow-xl m-auto">
-				<div className="card-body">
-					<h2 className="card-title m-auto">{routine.subject}</h2>
-					<p>{routine.subjectFull}</p>
+				<div className="card-body flex flex-col justify-between">
+					<h2 className="card-title mx-auto">{routine.subject}</h2>
+					<p className="mx-auto text-center">{routine.subjectFull}</p>
+					<p className="mx-auto text-center">{routine.techerFull}</p>
 				</div>
 			</div>
 		</>
